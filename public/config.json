@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "42ded57f-505a-45aa-adff-4123e0639d2d",
        "save": {
-           "url": "https://twilio-sfmc-sms.herokuapp.com/save",
+           "url": "https://twilio-sfmc-sms.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://twilio-sfmc-sms.herokuapp.com/publish",
+           "url": "https://twilio-sfmc-sms.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://twilio-sfmc-sms.herokuapp.com/validate",
+           "url": "https://twilio-sfmc-sms.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://twilio-sfmc-sms.herokuapp.com/stop",
+           "url": "https://twilio-sfmc-sms.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
