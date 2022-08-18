@@ -46,8 +46,6 @@ define([
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
         console.log('Has In arguments: '+JSON.stringify(inArguments));
-        var mobileNumber = inArguments[0].to;
-        console.log('mobileNumber'+ "{{+"+mobileNumber+"}}");
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
@@ -66,7 +64,11 @@ define([
 
                 if (key === 'body') {
                     $('#messageBody').val(val);
-                }                                                               
+                }    
+                
+                if (key === 'to') {
+                    $('#mobileNumber').val(val);
+                } 
 
             })
         });
