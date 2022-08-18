@@ -94,13 +94,14 @@ define([
         var authToken = $('#authToken').val();
         var messagingService = $('#messagingService').val();
         var body = $('#messageBody').val();
+        var mobileNumber = $('#mobileNumber').val();
 
         payload['arguments'].execute.inArguments = [{
             "accountSid": accountSid,
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.SMSCustomActivity.MobileNumber}}" //<----This should map to your data extension name and phone number column
+            "to": mobileNumber //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;

@@ -97,10 +97,11 @@ exports.execute = function (req, res) {
     
     var requestBody = req.body.inArguments[0];
 
-    const accountSid = requestBody.accountSid;
-    const authToken = requestBody.authToken;
+    const accountSid = process.env.accountSid; 
+    const authToken = process.env.authToken;
     const to = requestBody.to;
-    const from = requestBody.messagingService;
+    const from = process.env.fromNumber;
+    //const from = requestBody.messagingService;
     const body = requestBody.body;;
 
     const client = require('twilio')(accountSid, authToken); 
@@ -108,9 +109,9 @@ exports.execute = function (req, res) {
     client.messages 
           .create({ 
              body: body,
-             messagingService: from,
+             //messagingService: from,
              to: to,
-             from: '+18162030513'
+             from: fromNumber
            }) 
           .then(message => console.log(message.sid)) 
           .done();
