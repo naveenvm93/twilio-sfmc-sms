@@ -100,7 +100,7 @@ exports.execute = function (req, res) {
     const accountSid = process.env.accountSid; 
     const authToken = process.env.authToken;
     const to = requestBody.to;
-    const from = process.env.fromNumber;
+    const fromNumber = process.env.fromNumber;
     //const from = requestBody.messagingService;
     const body = requestBody.body;;
 
